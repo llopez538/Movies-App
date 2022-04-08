@@ -18,21 +18,8 @@ class MainActivity : AppCompatActivity() {
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.sendMovie.setOnClickListener {
-            val message = binding.message.text
-            Toast.makeText(this, message, Toast.LENGTH_LONG).show()
-        }
+        binding.recycler.adapter = MoviesAdapter()
 
-        /*val titleMovie = binding.message.text
-        val message = Toast.makeText(this, titleMovie, Toast.LENGTH_LONG)
-
-        val button:Button = findViewById(R.id.sendMovie)
-        button.setOnClickListener {
-            message.show()
-        }*/
-
-        // val message = findViewById<TextView>(R.id.message)
-        // message.text = "Cambiando el texto"
     }
 
 
