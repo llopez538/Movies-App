@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import app.mistermobile.mymovies.databinding.ViewMovieItemBinding
+import com.bumptech.glide.Glide
 
 class MoviesAdapter(private val movies: List<Movie>) : RecyclerView.Adapter<MoviesAdapter.ViewHolder> () {
 
@@ -30,6 +31,9 @@ class MoviesAdapter(private val movies: List<Movie>) : RecyclerView.Adapter<Movi
 
         fun bind(movie: Movie) {
             binding.title.text = movie.title
+            Glide.with(binding.root.context)
+                .load(movie.cover)
+                .into(binding.cover)
         }
     }
 }

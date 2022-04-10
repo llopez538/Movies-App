@@ -20,17 +20,15 @@ class MainActivity : AppCompatActivity() {
 
         binding.recycler.adapter = MoviesAdapter(
             listOf(
-                Movie("tile1", "url 1"),
-                Movie("tile2", "url 1"),
-                Movie("tile3", "url 1"),
-                Movie("tile4", "url 1"),
-                Movie("tile5", "url 1"),
-                Movie("tile6", "url 1"),
-                Movie("tile7", "url 1"),
-                Movie("tile8", "url 1"),
-                Movie("tile9", "url 1"),
-
-
+                Movie("tile1", "https://loremflickr.com/320/240?lock=1"),
+                Movie("tile2", "https://loremflickr.com/320/240?lock=2"),
+                Movie("tile3", "https://loremflickr.com/320/240?lock=3"),
+                Movie("tile4", "https://loremflickr.com/320/240?lock=4"),
+                Movie("tile5", "https://loremflickr.com/320/240?lock=5"),
+                Movie("tile6", "https://loremflickr.com/320/240?lock=6"),
+                Movie("tile7", "https://loremflickr.com/320/240?lock=7"),
+                Movie("tile8", "https://loremflickr.com/320/240?lock=8"),
+                Movie("tile9", "https://loremflickr.com/320/240?lock=9")
                 )
         )
 
