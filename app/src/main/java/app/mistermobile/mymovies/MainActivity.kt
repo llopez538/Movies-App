@@ -18,7 +18,21 @@ class MainActivity : AppCompatActivity() {
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.recycler.adapter = MoviesAdapter()
+        binding.recycler.adapter = MoviesAdapter(
+            listOf(
+                Movie("tile1", "url 1"),
+                Movie("tile2", "url 1"),
+                Movie("tile3", "url 1"),
+                Movie("tile4", "url 1"),
+                Movie("tile5", "url 1"),
+                Movie("tile6", "url 1"),
+                Movie("tile7", "url 1"),
+                Movie("tile8", "url 1"),
+                Movie("tile9", "url 1"),
+
+
+                )
+        )
 
     }
 
