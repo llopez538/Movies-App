@@ -7,7 +7,12 @@ import androidx.recyclerview.widget.RecyclerView
 import app.mistermobile.mymovies.databinding.ViewMovieItemBinding
 import com.bumptech.glide.Glide
 
-class MoviesAdapter(private val movies: List<Movie>) : RecyclerView.Adapter<MoviesAdapter.ViewHolder> () {
+
+
+class MoviesAdapter(
+    private val movies: List<Movie>,
+    private val movieClickListener: (Movie) -> Unit
+    ) : RecyclerView.Adapter<MoviesAdapter.ViewHolder> () {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -21,7 +26,9 @@ class MoviesAdapter(private val movies: List<Movie>) : RecyclerView.Adapter<Movi
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(movies[position])
+        val movie = movies[position]
+        holder.bind(movie)
+        holder.itemView.setOnClickListener { movieClickListener(movie) }
     }
 
     override fun getItemCount(): Int = movies.size

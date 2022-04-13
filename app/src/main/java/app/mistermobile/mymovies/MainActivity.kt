@@ -30,7 +30,14 @@ class MainActivity : AppCompatActivity() {
                 Movie("tile8", "https://loremflickr.com/320/240?lock=8"),
                 Movie("tile9", "https://loremflickr.com/320/240?lock=9")
                 )
-        )
+        ) { movie ->
+            Toast
+                .makeText(
+                    this@MainActivity,
+                    movie.title,
+                    Toast.LENGTH_SHORT
+                ).show()
+        }
 
     }
 
